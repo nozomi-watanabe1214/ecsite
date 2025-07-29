@@ -79,6 +79,15 @@ clear:both;
 
 				<tr id = "box">
 					<td>
+						<label>ログインPASS:</label>
+					</td>
+					<td>
+						<s:property value = "loginPassword" escape = "false"/>
+					</td>
+				</tr>
+
+				<tr id = "box">
+					<td>
 						<label>ユーザー名：</label>
 					</td>
 					<td>

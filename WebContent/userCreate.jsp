@@ -82,7 +82,7 @@ clear:both;
 							<label>ログインPASS:</label>
 						</td>
 						<td>
-							<input type = "text" name = "loginPasssword" value = ""/>
+							<input type = "text" name = "loginPassword" value = ""/>
 						</td>
 					</tr>
 					<tr>
