@@ -5,11 +5,12 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.diworksdev.ecsite.dao.BuyItemCompleteDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 	public Map<String, Object> session;
-	private BuyItemCmpleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
+	private BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
 
 	public String execute() throws SQLException{
 		buyItemCompleteDAO.buyItemInfo(session.get("id").toString(),
