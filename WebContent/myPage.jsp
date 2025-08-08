@@ -81,7 +81,49 @@ text-align:right;
 						<th>購入日</th>
 					</tr>
 
-					</table></s:elseif></div></div>
+					<s:iterator value = "myPageList">
 
+					<tr>
+						<td>
+							<s:property value = "itemName"/>
+						</td>
+						<td>
+							<s:property value = "totalPrice"/>
+							<span>円</span>
+						</td>
+						<td>
+							<s:property value = "totalCount"/>
+							<span>個</span>
+						</td>
+						<td>
+							<s:property value = "payment"/>
+						</td>
+						<td>
+							<s:property value = "insert_date"/>
+						</td>
+					</s:iterator>
+					</table>
+
+					<s:form action = "MyPageAction">
+						<input type = "hidden" name = "deleteFlg" value = "1">
+						<s:submit value = "削除"/>
+					</s:form>
+			</s:elseif>
+
+			<s:if test="message ! = null">
+				<h3><s:property value = "message"/></h3>
+			</s:if>
+
+			<div id = "text-right">
+				<p>Homeへ戻る場合は<a href = '<s:url action = "GoHomeAction"/>'>こちら</a></p>
+				<p>ログアウトする場合は<a href = '<s:url action = "LogoutAction"/>'>こちら</a></p>
+			</div>
+		</div>
+	</div>
+
+	<div id = "footer">
+		<div id = "pr">
+		</div>
+	</div>
 </body>
 </html>
